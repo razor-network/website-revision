@@ -57,38 +57,38 @@ $(document).ready(function(){
 	}
 
 	// AJAX send form
-		
-	$("form").submit(function(event){
-		event.preventDefault();
-	 
-		var form = $(this),
-			term = form.serialize(),
-			url = form.attr("action"),
-			required_fields_filled = true;
-			
-		form.find("input, textarea, select").each(function(){
-			if($(this).prop("required") && $(this).val()==""){
-				required_fields_filled = false;
-			}
-		});
 
-		if(required_fields_filled){
-			var posting = $.post(url, term);
-			posting
-			.done(function(data){
-				if(data=="ok"){
-					$(".alert-form-success").fadeIn(200).delay(5000).fadeOut(200);
-				}else{
-					$(".alert-form-error").fadeIn(200).delay(5000).fadeOut(200);
-				}
-			})
-			.fail(function(){
-				$(".alert-form-error").fadeIn(200).delay(5000).fadeOut(200);
-			});
-		}else{
-			$(".alert-form-check-fields").fadeIn(200).delay(5000).fadeOut(200);
-		}
-	});
+	// $("form").submit(function(event){
+	// 	event.preventDefault();
+	//
+	// 	var form = $(this),
+	// 		term = form.serialize(),
+	// 		url = form.attr("action"),
+	// 		required_fields_filled = true;
+	//
+	// 	form.find("input, textarea, select").each(function(){
+	// 		if($(this).prop("required") && $(this).val()==""){
+	// 			required_fields_filled = false;
+	// 		}
+	// 	});
+	//
+	// 	if(required_fields_filled){
+	// 		var posting = $.post(url, term);
+	// 		posting
+	// 		.done(function(data){
+	// 			if(data=="ok"){
+	// 				$(".alert-form-success").fadeIn(200).delay(5000).fadeOut(200);
+	// 			}else{
+	// 				$(".alert-form-error").fadeIn(200).delay(5000).fadeOut(200);
+	// 			}
+	// 		})
+	// 		.fail(function(){
+	// 			$(".alert-form-error").fadeIn(200).delay(5000).fadeOut(200);
+	// 		});
+	// 	}else{
+	// 		$(".alert-form-check-fields").fadeIn(200).delay(5000).fadeOut(200);
+	// 	}
+	// });
 
 	// Function to add style to form, when user clicks to input inside it
 
@@ -130,7 +130,7 @@ $(document).ready(function(){
 			});
 		});
 	});
-	 
+
 	// Open video in popup
 
 	$(".js-play-popup-video").click(function(event){
@@ -205,7 +205,7 @@ $(document).ready(function(){
 	if($(".js-cvv-mask").length > 0){
 		$(".js-cvv-mask").mask("999");
 	}
-	
+
 	// Disable / enable blocks in Form 13
 
 	$(".form_13 input[type=radio]").change(function(){
@@ -218,7 +218,7 @@ $(document).ready(function(){
 
 	if($(".js-google-map").length>0){
 		$(".js-google-map").each(function(){
-			
+
 			var map;
 			var map_container = this;
 			if($(map_container).attr("data-coords")!=undefined){
@@ -242,11 +242,11 @@ $(document).ready(function(){
 						zoom: zoom,
 						center: coords,				},
 					map = new google.maps.Map(map_container, mapOptions);
-				if(marker_image){	
+				if(marker_image){
 					var marker_icon = {
-						url: marker_image, 
+						url: marker_image,
 						scaledSize: new google.maps.Size(marker_size[0], marker_size[1]),
-						origin: new google.maps.Point(0,0), 
+						origin: new google.maps.Point(0,0),
 						anchor: new google.maps.Point(marker_size[0]/2, marker_size[1])
 					},
 					marker = new google.maps.Marker({
@@ -257,7 +257,7 @@ $(document).ready(function(){
 				}
 
 			}
-			
+
 			init();
 
 		});
@@ -346,7 +346,7 @@ $(document).ready(function(){
 				}
 			]
 		});
-		
+
 		$('.content_23_slider_nav').slick({
 			slidesToShow: 4,
 			slidesToScroll: 1,
@@ -480,7 +480,7 @@ $(document).ready(function(){
 			adaptiveHeight: true,
 			asNavFor: '.form_4_menu',
 		});
-		
+
 		$('.form_4_menu').slick({
 			slidesToShow: 2,
 			slidesToScroll: 1,
@@ -500,7 +500,7 @@ $(document).ready(function(){
 			adaptiveHeight: true,
 			asNavFor: '.form_15_menu',
 		});
-		
+
 		$('.form_15_menu').slick({
 			slidesToShow: 2,
 			slidesToScroll: 1,
@@ -523,7 +523,7 @@ $(document).ready(function(){
 			slidesToShow: 1,
 			slidesToScroll: 1,
 		});
-		
+
 		var toggle = $(".custom-toggle");
 		var togglePin = toggle.find("i");
 		$(".pricing_table_6 .slider").on('beforeChange',function(){
@@ -536,7 +536,7 @@ $(document).ready(function(){
 				togglePin.animate({left:animate_to},200);
 			}
 		});
-		
+
 		toggle.click(function(){
 			$(".pricing_table_6 .slider").slick("slickNext");
 		});
