@@ -5,6 +5,7 @@
 		<title>Razor network</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 				<link rel="icon" href="i/favicon.png" type="image/x-icon">
+				  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 				<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,500,700,800,900|Poppins:100,200,300,400,500,600,700,800,900&amp;subset=latin" rel="stylesheet">
 				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 					<link href="css/style.css" rel="stylesheet" />
@@ -72,7 +73,11 @@
 	<div class="container">
 		<div class="mb-3 logo color-white d-block d-xl-none text-center logo_mobile">Razor</div>
 		<h1 class="color-white text-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">Truly decentralized oracle network
-<br />for decentralized finance</h1>
+<br />for decentralized
+<div class="finance animated">Finance</div>
+<!-- <div class="insurance">Insurance</div> -->
+
+</h1>
 		<div class="mw-620 mx-auto mt-35 f-22 color-white op-7 text-center text-adaptive">
 			<span data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
 				Razor network is the world's first decentralized oracle network with onchain governance, offering high economic security.
@@ -422,5 +427,63 @@ Razor is truly decentralized oracle platform offering a high degree of decentral
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/script.js"></script>
 
+<script>
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function animateCSS(element, animationName, callback) {
+    const node = document.querySelector(element)
+    node.classList.add( animationName)
+		if (typeof callback === 'function') callback(element, animationName)
+
+    // node.addEventListener('animationend', handleAnimationEnd)
+}
+
+function handleAnimationEnd(element, animationName) {
+	const node = document.querySelector(element)
+
+		node.classList.remove( animationName)
+		// node.classList.add('animated', 'fadeOutDown')
+
+		node.removeEventListener('animationend', handleAnimationEnd)
+
+		if (typeof callback === 'function') callback()
+}
+
+async function main() {
+	elements = ['Prediction markets',
+'Insurance',
+'Synthetic assets',
+'Stablecoins',
+'Identity',
+'Atomic swaps',
+'Finance',
+'Lending']
+let element = '.finance'
+let node = document.querySelector(element)
+node.classList.add('faster')
+
+	while(true) {
+		for (let i =0; i<elements.length; i++) {
+			// handleAnimationEnd('.finance', 'fadeOutDown')
+			node.classList.remove( 'fadeOutDown')
+			node.classList.add('fadeInDown')
+			await sleep(600)
+			node.classList.remove( 'fadeInDown')
+			node.classList.add('fadeOutDown')
+			await sleep(600)
+
+
+			// animateCSS('.finance', 'fadeInDown')
+
+		node.innerHTML = elements[i]
+		}
+
+}
+}
+main()
+
+</script>
 </body>
 </html>
