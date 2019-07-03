@@ -243,38 +243,6 @@ function handleAnimationEnd(element, animationName) {
 		if (typeof callback === 'function') callback()
 }
 
-async function main() {
-	elements = ['Prediction markets',
-'Insurance',
-'Synthetic assets',
-'Stablecoins',
-'Identity',
-'Atomic swaps',
-'Finance',
-'Lending']
-let element = '.finance'
-let node = document.querySelector(element)
-node.classList.add('faster')
-
-	while(true) {
-		for (let i =0; i<elements.length; i++) {
-			// handleAnimationEnd('.finance', 'fadeOutDown')
-			node.classList.remove( 'fadeOutDown')
-			node.classList.add('fadeInDown')
-			await sleep(600)
-			node.classList.remove( 'fadeInDown')
-			node.classList.add('fadeOutDown')
-			await sleep(600)
-
-
-			// animateCSS('.finance', 'fadeInDown')
-
-		node.innerHTML = elements[i]
-		}
-
-}
-}
-main()
 
 
 let provider2 = 'wss://rinkeby.infura.io/ws'
