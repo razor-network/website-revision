@@ -11,6 +11,14 @@
 					<link href="css/style.css" rel="stylesheet" />
 				<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/atom-one-dark.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+<script type="text/javascript" src="js/solidity.js"></script>
+<script type="text/javascript">
+    hljs.registerLanguage('solidity', window.hljsDefineSolidity);
+    hljs.initHighlightingOnLoad();
+</script>
 		<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script> -->
 			</head>
 	<body>
@@ -137,8 +145,32 @@ Razor is truly decentralized oracle platform offering a high degree of decentral
 				<div class="color-heading text-adaptive">Blockchains do not have access to the data from outside the blockchain. Such data is necessary for operation of various decentralized applications. This problem is solved by oracles.
 Razor is truly decentralized oracle platform offering a high degree of decentralization and economic security, which is crucial for decentralized finance applications.
 </div>
-<br/>
-<div data-aos-duration="500" data-aos="fade-down" data-aos-delay="0" class="aos-init aos-animate">
+<pre class="text-left"><code>pragma solidity ^0.5.2;
+
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20Mintable.sol";
+
+/**
+ * @title SimpleToken
+ * @dev Very simple ERC20 Token example, where all tokens are pre-assigned to the creator.
+ * Note they can later distribute these tokens as they wish using `transfer` and other
+ * `ERC20` functions.
+ */
+contract SimpleToken is ERC20, ERC20Detailed, ERC20Mintable {
+    uint8 public constant DECIMALS = 18;
+    uint256 public constant INITIAL_SUPPLY = 10000 * (10 ** uint256(DECIMALS));
+
+    /**
+     * @dev Constructor that gives msg.sender all of existing tokens.
+     */
+    constructor () public ERC20Detailed("SchellingCoin", "SCH", DECIMALS) {
+        _mint(msg.sender, INITIAL_SUPPLY);
+    }
+}
+
+</code></pre>
+  <div data-aos-duration="500" data-aos="fade-down" data-aos-delay="0" class="aos-init aos-animate">
 				<a href="whitepaper.pdf" class="mb-30 btn lg action-1">Whitepaper</a>
 				<a href="https://github.com/razor-network" target="_blank" class="mb-30 btn lg action-1">Github</a>
 				<!-- <div class="color-heading text-adaptive">Commercial License</div> -->
