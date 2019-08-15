@@ -1,1304 +1,1112 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" >
-		<title>Razor network</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-				<link rel="icon" href="i/favicon.png" type="image/x-icon">
-				<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143423314-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-143423314-1');
-</script>
+<head>
+    <meta charset="utf-8">
+    <title>Razor network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="i/favicon.png" type="image/x-icon">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143423314-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-				  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-				<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,500,700,800,900|Poppins:100,200,300,400,500,600,700,800,900&amp;subset=latin" rel="stylesheet">
-				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-					<link href="css/style.css" rel="stylesheet" />
-				<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="./web3.min.js"></script>
-		<!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script> -->
-			</head>
-			<body>
-		<!-- Navigation Mobile type 2 -->
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-		<a class="open_menu color-main bg-light radius_full"><i class="fas fa-bars lh-40"></i></a>
-		<div class="navigation_mobile bg-light type2">
-			<a class="close_menu color-main"><i class="fas fa-times"></i></a>
-			<div class="px-40 pt-60 pb-60 text-center inner">
-				<!-- <a  class="link color-white f-18 mx-15" href="dashboard.html">Testnet</a>
+        gtag('config', 'UA-143423314-1');
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,500,700,800,900|Poppins:100,200,300,400,500,600,700,800,900&amp;subset=latin" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="./web3.min.js"></script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDP6Ex5S03nvKZJZSvGXsEAi3X_tFkua4U"></script> -->
+</head>
+
+<body>
+    <!-- Navigation Mobile type 2 -->
+
+    <a class="open_menu color-main bg-light radius_full"><i class="fas fa-bars lh-40"></i></a>
+    <div class="navigation_mobile bg-light type2">
+        <a class="close_menu color-main"><i class="fas fa-times"></i></a>
+        <div class="px-40 pt-60 pb-60 text-center inner">
+            <!-- <a  class="link color-white f-18 mx-15" href="dashboard.html">Testnet</a>
 				<a class="link color-white f-18 mx-15" href="whitepaper.pdf">Whitepaper</a> -->
 
-				<div><a href="/" class="f-heading f-22 link color-main mb-20">Home</a></div>
-				<div><a href="dashboard.html" class="f-heading f-22 link color-main mb-20">Testnet</a></div>
-				<div><a href="developers.html" class="f-heading f-22 link color-main mb-20">Developers</a></div>
-				<div><a href="whitepaper.pdf" class="f-heading f-22 link color-main mb-20">Whitepaper</a></div>
-				<!-- <div><a href="#" class="f-heading f-22 link color-main mb-20">Featured</a></div>
+            <div><a href="/" class="f-heading f-22 link color-main mb-20">Home</a></div>
+            <div><a href="dashboard.html" class="f-heading f-22 link color-main mb-20">Testnet</a></div>
+            <div><a href="developers.html" class="f-heading f-22 link color-main mb-20">Developers</a></div>
+            <div><a href="whitepaper.pdf" class="f-heading f-22 link color-main mb-20">Whitepaper</a></div>
+            <!-- <div><a href="#" class="f-heading f-22 link color-main mb-20">Featured</a></div>
 				<div><a href="#" class="f-heading f-22 link color-main mb-20">Designers</a></div>
 				<div><a href="#" class="f-heading f-22 link color-main mb-40">Team</a></div> -->
 
-				<!-- <div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">Help</a></div>
+            <!-- <div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">Help</a></div>
 				<div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">F.A.Q.</a></div>
 				<div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">Support</a></div>
 				<div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">About Us</a></div>
 				<div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">Blog</a></div>
 				<div><a href="#" class="f-12 link color-main op-7 text-uppercase sp-20 mb-20">Careers</a></div> -->
 
-				<div class="socials mt-120">
-					<a href="https://github.com/razor-network" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-github"></i></a>
-					<a href="https://twitter.com/razor_network" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-twitter"></i></a>
-					<a href="https://t.me/razornetwork" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-telegram"></i></a>
-					<a href="https://discord.gg/3kvXUye" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-discord"></i></a>
-				</div>
-			</div>
-		</div>
+            <div class="socials mt-120">
+                <a href="https://github.com/razor-network" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/razor_network" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-twitter"></i></a>
+                <a href="https://t.me/razornetwork" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-telegram"></i></a>
+                <a href="https://discord.gg/3kvXUye" target="_blank" class="link color-main f-18 mx-10"><i class="fab fa-discord"></i></a>
+            </div>
+        </div>
+    </div>
 
-		<!-- Header 2 -->
+    <!-- Header 2 -->
 
-		<header class="pt-190 pb-120 bg-dark header_2">
+    <header class="pt-190 pb-120 bg-dark header_2">
 
-			<!-- Header Menu 2 -->
+        <!-- Header Menu 2 -->
 
-			<nav class="header_menu_2 transparent pt-30 pb-30 mt-20">
-				<div class="container px-xl-0">
-					<div class="row justify-content-between align-items-baseline">
-						<div class="col-md-4" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750">
-							<div class="logo color-white"><a href='/'><img src="i/logo3.svg" height="50px"></img></a></div>
+        <nav class="header_menu_2 transparent pt-30 pb-30 mt-20">
+            <div class="container px-xl-0">
+                <div class="row justify-content-between align-items-baseline">
+                    <div class="col-md-4" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750">
+                        <div class="logo color-white"><a href='/'><img src="i/logo3.svg" height="50px"></img></a></div>
 
-						</div>
-						<!-- <span data-aos-duration="500" data-aos="fade-down" data-aos-delay="750" >
+                    </div>
+                    <!-- <span data-aos-duration="500" data-aos="fade-down" data-aos-delay="750" >
 							<a  class=" link color-white" style = "padding: .5rem 1rem;" href="dashboard.html">Testnet</a>
 							<a   class=" link color-white" style = "padding: .5rem 1rem;" href="https://github.com/razor-network/whitepaper/raw/master/Razor%20Network%20Whitepaper%200.4.pdf">Whitepaper</a>
 						</span> -->
-						<div class="col-md-2 d-flex justify-content-end align-items-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750">
-							<!-- <a href="#" class="link color-white f-18 mx-15">Features</a>
+                    <div class="col-md-2 d-flex justify-content-end align-items-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="750">
+                        <!-- <a href="#" class="link color-white f-18 mx-15">Features</a>
 							<a href="#" class="link color-white f-18 mx-15">Team</a>
 							<a href="#" class="btn sm action-2 mx-15">Contact</a> -->
-							<a  class="link color-white f-18 mx-15" href="dashboard.html">Testnet</a>
-							<a  class="link color-white f-18 mx-15" href="developers.html">Developers</a>
-							<a class="link color-white f-18 mx-15" href="whitepaper.pdf">Whitepaper</a>
+                        <a class="link color-white f-18 mx-15" href="dashboard.html">Testnet</a>
+                        <a class="link color-white f-18 mx-15" href="developers.html">Developers</a>
+                        <a class="link color-white f-18 mx-15" href="whitepaper.pdf">Whitepaper</a>
 
-							<a href="https://github.com/razor-network" class="mx-15 link color-white"><i class="fab fa-github fa-2x"></i></a>
-							<a href="https://twitter.com/razor_network" class="mx-15 link color-white"><i class="fab fa-twitter fa-2x"></i></a>
-							<a href="https://t.me/razornetwork" class="mx-15 link color-white"><i class="fab fa-telegram fa-2x "></i></a>
-							<a href="https://discord.gg/3kvXUye" class="mx-15 link color-white"><i class="fab fa-discord fa-2x "></i></a>
+                        <a href="https://github.com/razor-network" class="mx-15 link color-white"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="https://twitter.com/razor_network" class="mx-15 link color-white"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://t.me/razornetwork" class="mx-15 link color-white"><i class="fab fa-telegram fa-2x "></i></a>
+                        <a href="https://discord.gg/3kvXUye" class="mx-15 link color-white"><i class="fab fa-discord fa-2x "></i></a>
 
-						</div>
-					</div>
-				</div>
-			</nav>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
 
-	<div class="container">
-		<div class="mb-3 logo color-white d-block d-xl-none text-center logo_mobile">	<a href='/'><img src="i/logo3.svg" height="50px"></img></a>
-</div>
-		<h1 class="color-white text-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">Razor Steel testnet is live!
-<!-- <div class="insurance">Insurance</div> -->
+        <div class="container">
+            <div class="mb-3 logo color-white d-block d-xl-none text-center logo_mobile"> <a href='/'><img src="i/logo3.svg" height="50px"></img></a>
+            </div>
+            <h1 class="color-white text-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">Razor Steel testnet is live!
+                <!-- <div class="insurance">Insurance</div> -->
 
-</h1>
-		<div class="mw-620 mx-auto mt-35 f-22 color-white op-7 text-center text-adaptive">
-			<div data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-				Razor steel is in private beta. Please contact us for early access.
-			</div>
-				<!-- Blockchains do not have access to the data from outside the blockchain. Such data is necessary for operation of various decentralized applications.
+            </h1>
+            <div class="mw-620 mx-auto mt-35 f-22 color-white op-7 text-center text-adaptive">
+                <div data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+                    Razor steel is in private beta. Please contact us for early access.
+                </div>
+                <!-- Blockchains do not have access to the data from outside the blockchain. Such data is necessary for operation of various decentralized applications.
 
 Traditionally this is done by using a centralized entities called “Oracles”. But they are a single point of failure in otherwise decentralized applications and must be trustworthy.
 
 Razor is truly decentralized oracle platform offering a high degree of decentralization and economic security, which is crucial for decentralized finance applications. -->
 
-			<!-- </span> -->
-			<a href="https://forms.gle/soV7ZCjottt4Y2EP6" class="btn lg action-1 color-white">Contact us</a>
-		</div>
-		<!-- <div class="col-xl-6 flex-wrap justify-content-center justify-content-md-between holder"> -->
+                <!-- </span> -->
+                <a href="https://forms.gle/soV7ZCjottt4Y2EP6" class="btn lg action-1 color-white">Contact us</a>
+            </div>
+            <!-- <div class="col-xl-6 flex-wrap justify-content-center justify-content-md-between holder"> -->
 
-<!-- </div> -->
-		<!-- <form class="row align-items-center justify-content-center no-gutters mt-70" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500" method="POST" action="form-handler.php"> -->
-				<!-- <form class="row align-items-center justify-content-center no-gutters mt-70" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500" action="https://gmail.us20.list-manage.com/subscribe/post?u=32e904d07df33d9c4d5d756eb&amp;id=f3daba9fa6&c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+            <!-- </div> -->
+            <!-- <form class="row align-items-center justify-content-center no-gutters mt-70" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500" method="POST" action="form-handler.php"> -->
+            <!-- <form class="row align-items-center justify-content-center no-gutters mt-70" data-aos-duration="500" data-aos="fade-down" data-aos-delay="500" action="https://gmail.us20.list-manage.com/subscribe/post?u=32e904d07df33d9c4d5d756eb&amp;id=f3daba9fa6&c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
 					<div class="col-xl-6 flex-wrap justify-content-center justify-content-md-between holder">
     <!-- <div id="mc_embed_signup_scroll" class="input-group input-group-sm mb-3"> -->
-	<!-- <label for="mce-EMAIL">Subscribe</label> -->
-	<!-- <input type="email" value="" name="EMAIL"  class="mw-320 input lg border-transparent-white focus-white color-white placeholder-transparent-white f-20"  id="mce-EMAIL" placeholder="Your email" required> -->
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_32e904d07df33d9c4d5d756eb_f3daba9fa6" tabindex="-1" value=""></div> -->
-    <!-- <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"  class="btn action-1 lg"> -->
-    <!-- </div> -->
-<!-- </form> -->
-				<!-- <input type="email" name="email" placeholder="Your email" class="mw-320 input lg border-transparent-white focus-white color-white placeholder-transparent-white f-20" required />
+            <!-- <label for="mce-EMAIL">Subscribe</label> -->
+            <!-- <input type="email" value="" name="EMAIL"  class="mw-320 input lg border-transparent-white focus-white color-white placeholder-transparent-white f-20"  id="mce-EMAIL" placeholder="Your email" required> -->
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_32e904d07df33d9c4d5d756eb_f3daba9fa6" tabindex="-1" value=""></div> -->
+            <!-- <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"  class="btn action-1 lg"> -->
+            <!-- </div> -->
+            <!-- </form> -->
+            <!-- <input type="email" name="email" placeholder="Your email" class="mw-320 input lg border-transparent-white focus-white color-white placeholder-transparent-white f-20" required />
 				<button class="btn action-1 lg">Subscribe</button> -->
 
 
-		<!-- <div class="color-white op-3 text-center mt-35">
+            <!-- <div class="color-white op-3 text-center mt-35">
 			<span data-aos-duration="500" data-aos="fade-down" data-aos-delay="750">
 			<!-- Subscribe to our newsletter for latest updates -->
-			<!-- <a href="#" class="link color-white">Terms of Service</a> -->
-			<!-- </span> -->
-		<!-- </div> -->
-	</div>
-</header>
+            <!-- <a href="#" class="link color-white">Terms of Service</a> -->
+            <!-- </span> -->
+            <!-- </div> -->
+        </div>
+    </header>
 
-<!-- Content 1 -->
+    <!-- Content 1 -->
 
-<section class="content_1 bg-light pt-80 pb-80">
-	<div class="container px-xl-0">
-		<div class="row justify-content-center">
-			<div class="col-xl-7 col-lg-10 text-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-				<h2 class="mt-25">Testnet dashboard</h2>
-				<div class="color-heading text-adaptive">Razor steel Testnet is currently reporting price of ETH/USD. The contract is deployed on <a href = "https://rinkeby.etherscan.io/address/0xc8afCAf330BacAed708A3976F914a8450293701e">Rinkeby</a>. You can check the status of the testnet below.</div>
-<br/>
+    <section class="content_1 bg-light pt-80 pb-80">
+        <div class="container px-xl-0">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-10 text-center" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+                    <h2 class="mt-25">Testnet dashboard</h2>
+                    <div class="color-heading text-adaptive">Razor steel Testnet is currently reporting price of ETH/USD. The contract is deployed on <a
+                            href="https://rinkeby.etherscan.io/address/0x85805137394718708F1e679862739E51Ef89Dc00">Rinkeby</a>. You can check the status of the testnet below.</div>
+                    <br />
 
-<!-- <div class="chart-container" style="position: relative; height:200vh; width:60vw"> -->
-	<h1 id= 'loading'>Loading...</h1>
-<canvas id="proposals"></canvas>
-<canvas id="revelations"></canvas>
-<canvas id="stakes"></canvas>
+                    <!-- <div class="chart-container" style="position: relative; height:200vh; width:60vw"> -->
+                    <h1 id='loading'>Loading...</h1>
+                    <canvas id="proposals"></canvas>
+                    <canvas id="proposals2"></canvas>
+                    <!-- <canvas id="revelations"></canvas>
+                    <canvas id="revelations2"></canvas>
+                    <canvas id="stakes"></canvas> -->
 
-<!-- </div> -->
-<div data-aos-duration="500" data-aos="fade-down" data-aos-delay="0" class="aos-init aos-animate">
-				<a href="https://rinkeby.etherscan.io/address/0xc8afCAf330BacAed708A3976F914a8450293701e" class="mb-30 btn lg action-1">Explore the Contract on Etherscan</a>
-				<!-- <a href="https://github.com/razor-network" target="_blank" class="mb-30 btn lg action-1">Github</a> -->
-				<!-- <div class="color-heading text-adaptive">Commercial License</div> -->
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+                    <!-- </div> -->
+                    <div data-aos-duration="500" data-aos="fade-down" data-aos-delay="0" class="aos-init aos-animate">
+                        <a href="https://rinkeby.etherscan.io/address/0x85805137394718708F1e679862739E51Ef89Dc00" class="mb-30 btn lg action-1">Explore the Contract on Etherscan</a>
+                        <!-- <a href="https://github.com/razor-network" target="_blank" class="mb-30 btn lg action-1">Github</a> -->
+                        <!-- <div class="color-heading text-adaptive">Commercial License</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-<!-- Footer 1 -->
+    <!-- Footer 1 -->
 
-<footer class="footer_1 bg-dark pt-75 pb-65 text-center">
-	<div class="container px-xl-0">
-		<div class="row justify-content-between align-items-center lh-40 links">
-			<div class="col-lg-4 col-sm-6 text-sm-right text-lg-left order-1 order-lg-0" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-				<!-- <a href="#" class="mr-15 link color-white">About</a>
+    <footer class="footer_1 bg-dark pt-75 pb-65 text-center">
+        <div class="container px-xl-0">
+            <div class="row justify-content-between align-items-center lh-40 links">
+                <div class="col-lg-4 col-sm-6 text-sm-right text-lg-left order-1 order-lg-0" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+                    <!-- <a href="#" class="mr-15 link color-white">About</a>
 				<a href="#" class="mx-15 link color-white">Policy</a> -->
-				<!-- <a href="#" class="mx-15 link color-white">Terms</a> -->
-			</div>
-			<div class="mb-10 mb-lg-0 col-lg-auto order-0" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-				<a href="#" class="logo link color-white">Razor network</a>
-			</div>
-			<div class="col-lg-4 col-sm-6 text-sm-left text-lg-right order-2 order-lg-0" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
-				<!-- <a href="#" class="mr-15 link color-main">Contacts</a> -->
-				<a href="https://github.com/razor-network" class="mx-15 link color-white"><i class="fab  fa-2x fa-github"></i></a>
-				<a href="https://twitter.com/razor_network" class="mx-15 link color-white"><i class="fab  fa-2x fa-twitter"></i></a>
-				<a href="https://t.me/razornetwork" class="mx-15 link color-white"><i class="fab  fa-2x fa-telegram "></i></a>
-				<a href="https://discord.gg/3kvXUye" class="mx-15 link color-white"><i class="fab  fa-2x fa-discord "></i></a>
+                    <!-- <a href="#" class="mx-15 link color-white">Terms</a> -->
+                </div>
+                <div class="mb-10 mb-lg-0 col-lg-auto order-0" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+                    <a href="#" class="logo link color-white">Razor network</a>
+                </div>
+                <div class="col-lg-4 col-sm-6 text-sm-left text-lg-right order-2 order-lg-0" data-aos-duration="500" data-aos="fade-down" data-aos-delay="250">
+                    <!-- <a href="#" class="mr-15 link color-main">Contacts</a> -->
+                    <a href="https://github.com/razor-network" class="mx-15 link color-white"><i class="fab  fa-2x fa-github"></i></a>
+                    <a href="https://twitter.com/razor_network" class="mx-15 link color-white"><i class="fab  fa-2x fa-twitter"></i></a>
+                    <a href="https://t.me/razornetwork" class="mx-15 link color-white"><i class="fab  fa-2x fa-telegram "></i></a>
+                    <a href="https://discord.gg/3kvXUye" class="mx-15 link color-white"><i class="fab  fa-2x fa-discord "></i></a>
 
-			</div>
-		</div>
-		<div class="row justify-content-center">
-			<div class="mt-10 col-xl-4 col-lg-5 col-md-6 col-sm-8" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
-				<div class="color-white text-adaptive">
-					&copy; 2019 All rights reserved
-					<!-- Be sure to take a look at our <a href="#" class="link color-heading">Terms of Use</a> <br />
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="mt-10 col-xl-4 col-lg-5 col-md-6 col-sm-8" data-aos-duration="500" data-aos="fade-down" data-aos-delay="0">
+                    <div class="color-white text-adaptive">
+                        &copy; 2019 All rights reserved
+                        <!-- Be sure to take a look at our <a href="#" class="link color-heading">Terms of Use</a> <br />
 					and <a href="#" class="link color-heading">Privacy Policy</a> -->
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-<!-- forms alerts -->
-<div class="alert alert-success alert-dismissible alert-form-success" role="alert">
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	Thanks for your message!
-</div>
-<div class="alert alert-warning alert-dismissible alert-form-check-fields" role="alert">
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	Please, fill in required fields.
-</div>
-<div class="alert alert-danger alert-dismissible alert-form-error" role="alert">
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	An error occurred while sending data :(
-</div>
-<!-- popup with video -->
-<div class="overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- forms alerts -->
+    <div class="alert alert-success alert-dismissible alert-form-success" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Thanks for your message!
+    </div>
+    <div class="alert alert-warning alert-dismissible alert-form-check-fields" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Please, fill in required fields.
+    </div>
+    <div class="alert alert-danger alert-dismissible alert-form-error" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        An error occurred while sending data :(
+    </div>
+    <!-- popup with video -->
+    <div class="overlay"></div>
 
-<div class="video_popup">
-	<a class="close">
-		<img srcset="i/close_white@2x.png 2x" src="i/close_white.png" alt="" />
-	</a>
-	<div class="d-flex align-items-center justify-content-center w-full h-full iframe_container"></div>
-</div>
+    <div class="video_popup">
+        <a class="close">
+            <img srcset="i/close_white@2x.png 2x" src="i/close_white.png" alt="" />
+        </a>
+        <div class="d-flex align-items-center justify-content-center w-full h-full iframe_container"></div>
+    </div>
 
-<script src="js/slick.min.js"></script>
-<script src="js/aos.min.js"></script>
-<script src="js/jquery.maskedinput.min.js"></script>
-<script src="js/script.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/aos.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/script.js"></script>
 
-<script>
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function animateCSS(element, animationName, callback) {
-    const node = document.querySelector(element)
-    node.classList.add( animationName)
-		if (typeof callback === 'function') callback(element, animationName)
-
-    // node.addEventListener('animationend', handleAnimationEnd)
-}
-
-function handleAnimationEnd(element, animationName) {
-	const node = document.querySelector(element)
-
-		node.classList.remove( animationName)
-		// node.classList.add('animated', 'fadeOutDown')
-
-		node.removeEventListener('animationend', handleAnimationEnd)
-
-		if (typeof callback === 'function') callback()
-}
-
-
-
-let provider2 = 'https://rinkeby.infura.io/v3/26056f03e83343f5bbd280bafaa52684'
-let networkid = '4' // rinkeby
-let web3 = new Web3(provider2, null, {})
-// let schellingBuild = require('./build/contracts/Schelling2.json')
-let schellingAbi = [
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "stakeGettingReward",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "nodes",
-      "outputs": [
-        {
-          "name": "id",
-          "type": "uint256"
-        },
-        {
-          "name": "stake",
-          "type": "uint256"
-        },
-        {
-          "name": "epochStaked",
-          "type": "uint256"
-        },
-        {
-          "name": "epochLastCommitted",
-          "type": "uint256"
-        },
-        {
-          "name": "epochLastRevealed",
-          "type": "uint256"
-        },
-        {
-          "name": "unstakeAfter",
-          "type": "uint256"
-        },
-        {
-          "name": "withdrawAfter",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "nodeIds",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "rewardPool",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "disputes",
-      "outputs": [
-        {
-          "name": "accWeight",
-          "type": "uint256"
-        },
-        {
-          "name": "median",
-          "type": "uint256"
-        },
-        {
-          "name": "lastVisited",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "totalStake",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "schAddress",
-      "outputs": [
-        {
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "voteWeights",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "numNodes",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "EPOCH",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "totalStakeRevealed",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "c",
-      "outputs": [
-        {
-          "name": "COMMIT",
-          "type": "uint8"
-        },
-        {
-          "name": "REVEAL",
-          "type": "uint8"
-        },
-        {
-          "name": "PROPOSE",
-          "type": "uint8"
-        },
-        {
-          "name": "DISPUTE",
-          "type": "uint8"
-        },
-        {
-          "name": "PENALTY_NOT_REVEAL_NUM",
-          "type": "uint256"
-        },
-        {
-          "name": "PENALTY_NOT_REVEAL_DENOM",
-          "type": "uint256"
-        },
-        {
-          "name": "PENALTY_NOT_IN_ZONE_NUM",
-          "type": "uint256"
-        },
-        {
-          "name": "PENALTY_NOT_IN_ZONE_DENOM",
-          "type": "uint256"
-        },
-        {
-          "name": "MIN_STAKE",
-          "type": "uint256"
-        },
-        {
-          "name": "BLOCK_REWARD",
-          "type": "uint256"
-        },
-        {
-          "name": "REVEAL_REWARD",
-          "type": "uint256"
-        },
-        {
-          "name": "SAFETY_MARGIN_LOWER",
-          "type": "uint256"
-        },
-        {
-          "name": "UNSTAKE_LOCK_PERIOD",
-          "type": "uint256"
-        },
-        {
-          "name": "WITHDRAW_LOCK_PERIOD",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "STATE",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "votes",
-      "outputs": [
-        {
-          "name": "value",
-          "type": "uint256"
-        },
-        {
-          "name": "weight",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "commitments",
-      "outputs": [
-        {
-          "name": "",
-          "type": "bytes32"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "blocks",
-      "outputs": [
-        {
-          "name": "proposerId",
-          "type": "uint256"
-        },
-        {
-          "name": "median",
-          "type": "uint256"
-        },
-        {
-          "name": "iteration",
-          "type": "uint256"
-        },
-        {
-          "name": "biggestStake",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "name": "_schAddress",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "nodeId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "Staked",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "nodeId",
-          "type": "uint256"
-        }
-      ],
-      "name": "Unstaked",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "nodeId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "Withdrew",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "epoch",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "nodeId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "commitment",
-          "type": "bytes32"
-        }
-      ],
-      "name": "Committed",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "y",
-          "type": "uint256"
-        }
-      ],
-      "name": "Y",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "epoch",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "nodeId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "value",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "stake",
-          "type": "uint256"
-        }
-      ],
-      "name": "Revealed",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "epoch",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "nodeId",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "median",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "iteration",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "name": "biggestStakerId",
-          "type": "uint256"
-        }
-      ],
-      "name": "Proposed",
-      "type": "event"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "epoch",
-          "type": "uint256"
-        },
-        {
-          "name": "amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "stake",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "epoch",
-          "type": "uint256"
-        }
-      ],
-      "name": "unstake",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "epoch",
-          "type": "uint256"
-        }
-      ],
-      "name": "withdraw",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "epoch",
-          "type": "uint256"
-        },
-        {
-          "name": "commitment",
-          "type": "bytes32"
-        }
-      ],
-      "name": "commit",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "epoch",
-          "type": "uint256"
-        },
-        {
-          "name": "value",
-          "type": "uint256"
-        },
-        {
-          "name": "secret",
-          "type": "bytes32"
-        },
-        {
-          "name": "stakerAddress",
-          "type": "address"
-        }
-      ],
-      "name": "reveal",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "iteration",
-          "type": "uint256"
-        },
-        {
-          "name": "biggestStakerId",
-          "type": "uint256"
-        },
-        {
-          "name": "nodeId",
-          "type": "uint256"
-        }
-      ],
-      "name": "isElectedProposer",
-      "outputs": [
-        {
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "epoch",
-          "type": "uint256"
-        },
-        {
-          "name": "median",
-          "type": "uint256"
-        },
-        {
-          "name": "iteration",
-          "type": "uint256"
-        },
-        {
-          "name": "biggestStakerId",
-          "type": "uint256"
-        }
-      ],
-      "name": "propose",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "epoch",
-          "type": "uint256"
-        },
-        {
-          "name": "sorted",
-          "type": "uint256[]"
-        }
-      ],
-      "name": "giveSorted",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "epoch",
-          "type": "uint256"
-        }
-      ],
-      "name": "resetDispute",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "epoch",
-          "type": "uint256"
-        }
-      ],
-      "name": "proposeAlt",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getEpoch",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getState",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getPrice",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "numBlocks",
-          "type": "uint8"
-        },
-        {
-          "name": "max",
-          "type": "uint256"
-        },
-        {
-          "name": "seed",
-          "type": "bytes32"
-        }
-      ],
-      "name": "prng",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "numBlocks",
-          "type": "uint8"
-        },
-        {
-          "name": "seed",
-          "type": "bytes32"
-        }
-      ],
-      "name": "prngHash",
-      "outputs": [
-        {
-          "name": "",
-          "type": "bytes32"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    }
-  ]
-
-let dataset = []
-let labels = []
-let nodes = []
-let revelations={}
-let stakes = {}
-let schelling = new web3.eth.Contract(schellingAbi, '0xc8afCAf330BacAed708A3976F914a8450293701e')
-
-// let simpleTokenBuild = require('./build/contracts/SimpleToken.json')
-// let simpleTokenAbi = simpleTokenBuild['abi']
-// let simpleToken = new web3.eth.Contract(simpleTokenAbi, simpleTokenBuild['networks'][networkid].address,
-//   {transactionConfirmationBlocks: 1,
-//     defaultGas: 500000,
-//     defaultGasPrice: 2000000000})
-
-async function processProposals (proposals) {
-  for (let i = 0; i < proposals.length; i++) {
-    dataset.push(Number(proposals[i].returnValues.median) / 100)
-    labels.push(Number(proposals[i].returnValues.epoch))
-    // console.log(Number(proposals[i].returnValues.median) / 100)
-  }
-}
-
-async function processReveals (reveals) {
-  for (let i = 0; i < reveals.length; i++) {
-
-    if(!nodes.includes(Number(reveals[i].returnValues.nodeId))) nodes.push(Number(reveals[i].returnValues.nodeId))
-    if (Number(reveals[i].returnValues.epoch) in revelations) {
-        if (Number(reveals[i].returnValues.nodeId) in revelations[Number(reveals[i].returnValues.epoch)]) {
-          revelations[Number(reveals[i].returnValues.epoch)][Number(reveals[i].returnValues.nodeId)].push(Number(reveals[i].returnValues.value) / 100)
-        } else {
-            revelations[Number(reveals[i].returnValues.epoch)][Number(reveals[i].returnValues.nodeId)]=[(Number(reveals[i].returnValues.value) / 100)]
-        }
-      } else {
-        revelations[Number(reveals[i].returnValues.epoch)]={[Number(reveals[i].returnValues.nodeId)]:[(Number(reveals[i].returnValues.value) / 100)]}
-      }
-
-      if (Number(reveals[i].returnValues.epoch) in stakes) {
-          if (Number(reveals[i].returnValues.nodeId) in stakes[Number(reveals[i].returnValues.epoch)]) {
-            stakes[Number(reveals[i].returnValues.epoch)][Number(reveals[i].returnValues.nodeId)].push(Number(reveals[i].returnValues.stake) )
-          } else {
-              stakes[Number(reveals[i].returnValues.epoch)][Number(reveals[i].returnValues.nodeId)]=[(Number(reveals[i].returnValues.stake) )]
-          }
-        } else {
-          stakes[Number(reveals[i].returnValues.epoch)]={[Number(reveals[i].returnValues.nodeId)]:[(Number(reveals[i].returnValues.stake) )]}
+    <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
         }
 
-    }
+        function animateCSS(element, animationName, callback) {
+            const node = document.querySelector(element)
+            node.classList.add(animationName)
+            if (typeof callback === 'function') callback(element, animationName)
 
-    console.log('revelations', revelations)
-    console.log('stakes', stakes)
-    console.log('nodes',nodes)
-  }
-
-
-async function main2 () {
-	let blockNumber = await web3.eth.getBlockNumber()
-  let reveals = await schelling.getPastEvents('Revealed', {
-    fromBlock: Number(blockNumber)-1000,
-    toBlock: 'latest'
-  })
-  let proposals = await schelling.getPastEvents('Proposed', {
-    fromBlock: Number(blockNumber)-1000,
-    toBlock: 'latest'
-  })
-  await processProposals(proposals)
-  await processReveals(reveals)
-  let chartColors = {
-  	red: 'rgb(255, 99, 132)',
-  	orange: 'rgb(255, 159, 64)',
-  	yellow: 'rgb(255, 205, 86)',
-  	green: 'rgb(75, 192, 192)',
-  	blue: 'rgb(54, 162, 235)',
-  	purple: 'rgb(153, 102, 255)',
-  	grey: 'rgb(201, 203, 207)'
-  };
-  	var colorNames = Object.keys(chartColors);
-  var ctx = document.getElementById('proposals').getContext('2d');
-  var chart = new Chart(ctx, {
-      // The type of chart we want to create
-      type: 'line',
-
-      // The data for our dataset
-      data: {
-          labels: labels,
-          datasets: [{
-              label: 'Final Ethereum price reported over epochs',
-              backgroundColor: '#40429b',
-              borderColor: '#40429b',
-              data: dataset
-          }]
-      },
-
-      // Configuration options go here
-      options: {}
-  });
-
-  var ctx2 = document.getElementById('revelations').getContext('2d');
-  let datasets = []
-
-  for (node of nodes) {
-    console.log('node', node)
-    let data = []
-    for (blockNumber in revelations) {
-        data.push(revelations[blockNumber][node])
-      }
-      console.log('data',data)
-      var colorName = colorNames[datasets.length % colorNames.length];
-  		var newColor = chartColors[colorName];
-      datasets.push({
-        label: node,
-        backgroundColor: newColor,
-        pointRadius:2,
-        borderColor: newColor,
-        data: data,
-        fill: false,
-      })
-  }
-  console.log('datasets',datasets)
-	window.myLine = new Chart(ctx2, {
-			type: 'line',
-			data: {
-				labels: labels,
-				datasets: datasets
-			},
-			options: {
-				responsive: true,
-				title: {
-					display: true,
-					text: 'Votes of individual stakers'
-				},
-				tooltips: {
-					mode: 'index',
-					intersect: false,
-				},
-				hover: {
-					mode: 'nearest',
-					intersect: true
-				},
-				scales: {
-					xAxes: [{
-						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'Epoch'
-						}
-					}],
-					yAxes: [{
-						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'Value'
-						}
-					}]
-				}
-			}
-		})
-    var ctx3 = document.getElementById('stakes').getContext('2d');
-    let datasets3 = []
-
-    for (node of nodes) {
-      console.log('node', node)
-      let data = []
-      for (blockNumber in stakes) {
-          data.push(stakes[blockNumber][node])
+            // node.addEventListener('animationend', handleAnimationEnd)
         }
-        console.log('data',data)
-        var colorName = colorNames[datasets3.length % colorNames.length];
-        var newColor = chartColors[colorName];
-        datasets3.push({
-          label: node,
-          backgroundColor: newColor,
-          pointRadius:2,
-          borderColor: newColor,
-          data: data,
-          steppedLine: true,
-          fill: false,
-        })
-    }
-    console.log('datasets3',datasets3)
-    window.myLine = new Chart(ctx3, {
-        type: 'line',
-        data: {
-          labels: labels,
-          datasets: datasets3
-        },
-        options: {
-          responsive: true,
-          title: {
-            display: true,
-            text: 'Stakes of individual stakers'
-          },
-          tooltips: {
-            mode: 'index',
-            intersect: false,
-          },
-          hover: {
-            mode: 'nearest',
-            intersect: true
-          },
-          scales: {
-            xAxes: [{
-              display: true,
-              scaleLabel: {
-                display: true,
-                labelString: 'Epoch'
-              }
-            }],
-            yAxes: [{
-              display: true,
-              scaleLabel: {
-                display: true,
-                labelString: 'Value'
-              }
-            }]
-          }
+
+        function handleAnimationEnd(element, animationName) {
+            const node = document.querySelector(element)
+
+            node.classList.remove(animationName)
+            // node.classList.add('animated', 'fadeOutDown')
+
+            node.removeEventListener('animationend', handleAnimationEnd)
+
+            if (typeof callback === 'function') callback()
         }
-      })
-    document.getElementById('loading').innerHTML='';
-
-}
-
-main2()
 
 
-</script>
+
+        let provider2 = 'https://rinkeby.infura.io/v3/26056f03e83343f5bbd280bafaa52684'
+        let networkid = '4' // rinkeby
+        let web3 = new Web3(provider2, null, {})
+        // let schellingBuild = require('./build/contracts/Schelling2.json')
+        let blockManagergAbi = [{
+                "constant": true,
+                "inputs": [{
+                    "name": "account",
+                    "type": "address"
+                }],
+                "name": "isWriter",
+                "outputs": [{
+                    "name": "",
+                    "type": "bool"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "stateManager",
+                "outputs": [{
+                    "name": "",
+                    "type": "address"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "voteManager",
+                "outputs": [{
+                    "name": "",
+                    "type": "address"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "stakeManager",
+                "outputs": [{
+                    "name": "",
+                    "type": "address"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [{
+                        "name": "",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "name": "disputes",
+                "outputs": [{
+                        "name": "accWeight",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "median",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "lastVisited",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "assetId",
+                        "type": "uint256"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [{
+                        "name": "",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "proposedBlocks",
+                "outputs": [{
+                        "name": "proposerId",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "iteration",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "biggestStake",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "valid",
+                        "type": "bool"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [{
+                    "name": "account",
+                    "type": "address"
+                }],
+                "name": "addWriter",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [],
+                "name": "renounceWriter",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [{
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "name": "blocks",
+                "outputs": [{
+                        "name": "proposerId",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "iteration",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "biggestStake",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "valid",
+                        "type": "bool"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "anonymous": false,
+                "inputs": [{
+                        "indexed": false,
+                        "name": "epoch",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "stakerId",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "medians",
+                        "type": "uint256[]"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "iteration",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "biggestStakerId",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "Proposed",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [{
+                        "indexed": false,
+                        "name": "epoch",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "stakerId",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "name": "medians",
+                        "type": "uint256[]"
+                    }
+                ],
+                "name": "BlockConfirmed",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [{
+                    "indexed": true,
+                    "name": "account",
+                    "type": "address"
+                }],
+                "name": "WriterAdded",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [{
+                    "indexed": true,
+                    "name": "account",
+                    "type": "address"
+                }],
+                "name": "WriterRemoved",
+                "type": "event"
+            },
+            {
+                "anonymous": false,
+                "inputs": [{
+                    "indexed": false,
+                    "name": "a",
+                    "type": "uint256"
+                }],
+                "name": "DebugUint256",
+                "type": "event"
+            },
+            {
+                "constant": true,
+                "inputs": [{
+                    "name": "epoch",
+                    "type": "uint256"
+                }],
+                "name": "getBlock",
+                "outputs": [{
+                    "components": [{
+                            "name": "proposerId",
+                            "type": "uint256"
+                        },
+                        {
+                            "name": "medians",
+                            "type": "uint256[]"
+                        },
+                        {
+                            "name": "iteration",
+                            "type": "uint256"
+                        },
+                        {
+                            "name": "biggestStake",
+                            "type": "uint256"
+                        },
+                        {
+                            "name": "valid",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "_block",
+                    "type": "tuple"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [{
+                    "name": "epoch",
+                    "type": "uint256"
+                }],
+                "name": "getBlockMedians",
+                "outputs": [{
+                    "name": "_blockMedians",
+                    "type": "uint256[]"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [{
+                        "name": "epoch",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "proposedBlock",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "getProposedBlock",
+                "outputs": [{
+                    "components": [{
+                            "name": "proposerId",
+                            "type": "uint256"
+                        },
+                        {
+                            "name": "medians",
+                            "type": "uint256[]"
+                        },
+                        {
+                            "name": "iteration",
+                            "type": "uint256"
+                        },
+                        {
+                            "name": "biggestStake",
+                            "type": "uint256"
+                        },
+                        {
+                            "name": "valid",
+                            "type": "bool"
+                        }
+                    ],
+                    "name": "_block",
+                    "type": "tuple"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [{
+                        "name": "epoch",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "proposedBlock",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "getProposedBlockMedians",
+                "outputs": [{
+                    "name": "_blockMedians",
+                    "type": "uint256[]"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [{
+                    "name": "epoch",
+                    "type": "uint256"
+                }],
+                "name": "getNumProposedBlocks",
+                "outputs": [{
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [{
+                        "name": "_stakeManagerAddress",
+                        "type": "address"
+                    },
+                    {
+                        "name": "_stateManagerAddress",
+                        "type": "address"
+                    },
+                    {
+                        "name": "_voteManagerAddress",
+                        "type": "address"
+                    }
+                ],
+                "name": "init",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [{
+                        "name": "epoch",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "medians",
+                        "type": "uint256[]"
+                    },
+                    {
+                        "name": "iteration",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "biggestStakerId",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "propose",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [{
+                        "name": "epoch",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "assetId",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "sorted",
+                        "type": "uint256[]"
+                    }
+                ],
+                "name": "giveSorted",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [{
+                    "name": "epoch",
+                    "type": "uint256"
+                }],
+                "name": "resetDispute",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [{
+                        "name": "epoch",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "blockId",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "finalizeDispute",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [{
+                        "name": "iteration",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "biggestStakerId",
+                        "type": "uint256"
+                    },
+                    {
+                        "name": "stakerId",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "isElectedProposer",
+                "outputs": [{
+                    "name": "",
+                    "type": "bool"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [],
+                "name": "confirmBlock",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            }
+        ]
+
+        let stakeManagerAbi = [{
+                "constant": true,
+                "inputs": [],
+                "name": "EPOCH",
+                "outputs": [{
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "STATE",
+                "outputs": [{
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [{
+                    "name": "epoch",
+                    "type": "uint256"
+                }],
+                "name": "setEpoch",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": false,
+                "inputs": [{
+                    "name": "state",
+                    "type": "uint256"
+                }],
+                "name": "setState",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getEpoch",
+                "outputs": [{
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getState",
+                "outputs": [{
+                    "name": "",
+                    "type": "uint256"
+                }],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ]
+        let eth = []
+        let btc = []
+        let labels = []
+        let nodes = []
+        let revelations = {}
+        let stakes = {}
+        let blockManager = new web3.eth.Contract(blockManagergAbi, '0x85805137394718708F1e679862739E51Ef89Dc00')
+        // let stakeManager = new web3.eth.Contract(stakeManagerAbi, '0x0dE5A47f9E2752AC597f7624AF358648bD07A35e')
+
+        // let simpleTokenBuild = require('./build/contracts/SimpleToken.json')
+        // let simpleTokenAbi = simpleTokenBuild['abi']
+        // let simpleToken = new web3.eth.Contract(simpleTokenAbi, simpleTokenBuild['networks'][networkid].address,
+        //   {transactionConfirmationBlocks: 1,
+        //     defaultGas: 500000,
+        //     defaultGasPrice: 2000000000})
+
+        async function processProposals(proposals) {
+            for (let i = 0; i < proposals.length; i++) {
+                eth.push(Number(proposals[i].returnValues.medians[0]) / 100)
+                btc.push(Number(proposals[i].returnValues.medians[1]) / 100)
+                labels.push(Number(proposals[i].returnValues.epoch))
+                // console.log(Number(proposals[i].returnValues.median) / 100)
+            }
+        }
+        //
+        // async function processReveals(reveals) {
+        //     for (let i = 0; i < reveals.length; i++) {
+        //
+        //         if (!nodes.includes(Number(reveals[i].returnValues.nodeId))) nodes.push(Number(reveals[i].returnValues.nodeId))
+        //         if (Number(reveals[i].returnValues.epoch) in revelations) {
+        //             if (Number(reveals[i].returnValues.nodeId) in revelations[Number(reveals[i].returnValues.epoch)]) {
+        //                 revelations[Number(reveals[i].returnValues.epoch)][Number(reveals[i].returnValues.nodeId)].push(Number(reveals[i].returnValues.value) / 100)
+        //             } else {
+        //                 revelations[Number(reveals[i].returnValues.epoch)][Number(reveals[i].returnValues.nodeId)] = [(Number(reveals[i].returnValues.value) / 100)]
+        //             }
+        //         } else {
+        //             revelations[Number(reveals[i].returnValues.epoch)] = {
+        //                 [Number(reveals[i].returnValues.nodeId)]: [(Number(reveals[i].returnValues.value) / 100)]
+        //             }
+        //         }
+        //
+        //         if (Number(reveals[i].returnValues.epoch) in stakes) {
+        //             if (Number(reveals[i].returnValues.nodeId) in stakes[Number(reveals[i].returnValues.epoch)]) {
+        //                 stakes[Number(reveals[i].returnValues.epoch)][Number(reveals[i].returnValues.nodeId)].push(Number(reveals[i].returnValues.stake))
+        //             } else {
+        //                 stakes[Number(reveals[i].returnValues.epoch)][Number(reveals[i].returnValues.nodeId)] = [(Number(reveals[i].returnValues.stake))]
+        //             }
+        //         } else {
+        //             stakes[Number(reveals[i].returnValues.epoch)] = {
+        //                 [Number(reveals[i].returnValues.nodeId)]: [(Number(reveals[i].returnValues.stake))]
+        //             }
+        //         }
+        //
+        //     }
+        //
+        //     console.log('revelations', revelations)
+        //     // console.log('stakes', stakes)
+        //     console.log('nodes', nodes)
+        // }
+
+
+        async function main2() {
+            let blockNumber = await web3.eth.getBlockNumber()
+            // let reveals = await voteManager.getPastEvents('Revealed', {
+            //     fromBlock: Number(blockNumber) - 1000,
+            //     toBlock: 'latest'
+            // })
+            let proposals = await blockManager.getPastEvents('BlockConfirmed', {
+                fromBlock: Number(blockNumber) - 1000,
+                toBlock: 'latest'
+            })
+            await processProposals(proposals)
+            // await processReveals(reveals)
+            let chartColors = {
+                red: 'rgb(255, 99, 132)',
+                orange: 'rgb(255, 159, 64)',
+                yellow: 'rgb(255, 205, 86)',
+                green: 'rgb(75, 192, 192)',
+                blue: 'rgb(54, 162, 235)',
+                purple: 'rgb(153, 102, 255)',
+                grey: 'rgb(201, 203, 207)'
+            };
+            var colorNames = Object.keys(chartColors);
+            var ctx = document.getElementById('proposals').getContext('2d');
+            var ctx2 = document.getElementById('proposals2').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Final Ethereum price reported over epochs',
+                        backgroundColor: chartColors.blue,
+                        borderColor: chartColors.blue,
+                        data: eth
+                    }
+                    // {
+                    //     label: 'Final Bitcoin price reported over epochs',
+                    //     // backgroundColor: chartColors.orange,
+                    //     borderColor: chartColors.orange,
+                    //     data: btc
+                    // }
+                ]
+                },
+
+                // Configuration options go here
+                options: {}
+            });
+
+            var chart2 = new Chart(ctx2, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: labels,
+                    datasets: [
+                    {
+                        label: 'Final Bitcoin price reported over epochs',
+                        backgroundColor: chartColors.orange,
+                        borderColor: chartColors.orange,
+                        data: btc
+                    }
+                ]
+                },
+
+                // Configuration options go here
+                options: {}
+            });
+
+            // var ctx2 = document.getElementById('revelations').getContext('2d');
+            // let datasets = []
+            //
+            // for (node of nodes) {
+            //     console.log('node', node)
+            //     let data = []
+            //     for (blockNumber in revelations) {
+            //         data.push(revelations[blockNumber][node])
+            //     }
+            //     console.log('data', data)
+            //     var colorName = colorNames[datasets.length % colorNames.length];
+            //     var newColor = chartColors[colorName];
+            //     datasets.push({
+            //         label: node,
+            //         // backgroundColor: newColor,
+            //         pointRadius: 2,
+            //         borderColor: newColor,
+            //         data: data,
+            //         fill: false,
+            //     })
+            // }
+            // console.log('datasets', datasets)
+            // window.myLine = new Chart(ctx2, {
+            //     type: 'line',
+            //     data: {
+            //         labels: labels,
+            //         datasets: datasets
+            //     },
+            //     options: {
+            //         responsive: true,
+            //         title: {
+            //             display: true,
+            //             text: 'Votes of individual stakers'
+            //         },
+            //         tooltips: {
+            //             mode: 'index',
+            //             intersect: false,
+            //         },
+            //         hover: {
+            //             mode: 'nearest',
+            //             intersect: true
+            //         },
+            //         scales: {
+            //             xAxes: [{
+            //                 display: true,
+            //                 scaleLabel: {
+            //                     display: true,
+            //                     labelString: 'Epoch'
+            //                 }
+            //             }],
+            //             yAxes: [{
+            //                 display: true,
+            //                 scaleLabel: {
+            //                     display: true,
+            //                     labelString: 'Value'
+            //                 }
+            //             }]
+            //         }
+            //     }
+            // })
+            // var ctx3 = document.getElementById('stakes').getContext('2d');
+            // let datasets3 = []
+            //
+            // for (node of nodes) {
+            //     console.log('node', node)
+            //     let data = []
+            //     for (blockNumber in stakes) {
+            //         data.push(stakes[blockNumber][node])
+            //     }
+            //     console.log('data', data)
+            //     var colorName = colorNames[datasets3.length % colorNames.length];
+            //     var newColor = chartColors[colorName];
+            //     datasets3.push({
+            //         label: node,
+            //         backgroundColor: newColor,
+            //         pointRadius: 2,
+            //         borderColor: newColor,
+            //         data: data,
+            //         steppedLine: true,
+            //         fill: false,
+            //     })
+            // }
+            // console.log('datasets3', datasets3)
+            // window.myLine = new Chart(ctx3, {
+            //     type: 'line',
+            //     data: {
+            //         labels: labels,
+            //         datasets: datasets3
+            //     },
+            //     options: {
+            //         responsive: true,
+            //         title: {
+            //             display: true,
+            //             text: 'Stakes of individual stakers'
+            //         },
+            //         tooltips: {
+            //             mode: 'index',
+            //             intersect: false,
+            //         },
+            //         hover: {
+            //             mode: 'nearest',
+            //             intersect: true
+            //         },
+            //         scales: {
+            //             xAxes: [{
+            //                 display: true,
+            //                 scaleLabel: {
+            //                     display: true,
+            //                     labelString: 'Epoch'
+            //                 }
+            //             }],
+            //             yAxes: [{
+            //                 display: true,
+            //                 scaleLabel: {
+            //                     display: true,
+            //                     labelString: 'Value'
+            //                 }
+            //             }]
+            //         }
+                // }
+            // })
+            document.getElementById('loading').innerHTML = '';
+
+        }
+
+        main2()
+    </script>
 </body>
+
 </html>
